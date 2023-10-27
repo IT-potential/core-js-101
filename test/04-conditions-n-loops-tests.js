@@ -338,7 +338,8 @@ describe('04-conditions-n-loops-tasks', () => {
       5019717010103742,
       6331101999990016,
       54891243456789010,
-    ].forEach((ccn) => {
+    ].forEach((ccn, i) => {
+      console.log(i);
       assert(
         tasks.isCreditCardNumber(ccn),
         `CCN ${ccn} is valid, but actually not`,
@@ -352,10 +353,12 @@ describe('04-conditions-n-loops-tasks', () => {
       4916123456789012,
       371449635398430,
       9112893456789010,
-    ].forEach((ccn) => {
+    ].forEach((ccn, i) => {
+      console.log(i);
       assert(
         tasks.isCreditCardNumber(ccn) === false,
         `CCN ${ccn} is not valid, but actually yes`,
+        
       );
     });
   });
